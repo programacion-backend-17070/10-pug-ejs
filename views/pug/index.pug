@@ -1,28 +1,9 @@
-doctype
-html
-  head
-    link(
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css"
-      type="text/css"
-    )
-    link(
-      rel="stylesheet"
-      href="/static/css/style.css"
-      type="text/css")
-  body
-    nav
-      ul
-        a(href='/pug')
-          li Inicio
-        a(href='/pug/add')
-          li Agregar pelicula
-    div(class="container")
-      h1 Hola, Bienvenidos
-      p Mis peliculas favoritan son:
-      movies
-      ul
-        each p in movies
-          li= p.name
-        else
-          li no hay datos en la lista aun
+extends layouts/base.pug
+block content
+  h1 Hola, Bienvenidos
+  p Mis peliculas favoritan son:
+  ul
+    each p in movies
+      li= p.name
+    else
+      li no hay datos en la lista aun
