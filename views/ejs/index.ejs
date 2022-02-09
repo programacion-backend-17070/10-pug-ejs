@@ -1,0 +1,15 @@
+<html>
+  <%- include('partials/head') %>
+  <body>
+    <%- include('partials/nav') %>
+    <div class="container">
+      <h1>Hola, bienvenidos. Esta es una plantilla EJS</h1>
+      <p>Mis peliculas favoritas son:</p>
+      <ul>
+        <% movies.forEach(function(movie) { %>
+          <li><%= movie.name %></li>
+        <% }) %>
+      </ul>
+    </div>
+  </body>
+</html>

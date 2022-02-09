@@ -1,0 +1,9 @@
+extends layout/base.pug
+block content
+  h1 Hola, bienvenidos
+  p Mis peliculas favoritas son
+  ul
+    each movie in movies
+      li= movie.name
+    else
+      li no hay datos en la lista

@@ -35,8 +35,6 @@ class Movie {
     const raw = await fs.readFile(this.path, "utf8")
     return JSON.parse(raw)
   }
-
-
 }
 
 module.exports = Movie
